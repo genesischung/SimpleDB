@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="720.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DBController">
+   <top>
+      <HBox prefHeight="150.0" prefWidth="960.0">
+         <children>
+            <TextField fx:id="textField" alignment="TOP_LEFT" prefHeight="150.0" prefWidth="800.0" promptText="Please Enter Your SQL Query">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </TextField>
+            <Button fx:id="goButton" contentDisplay="TOP" defaultButton="true" mnemonicParsing="false" onAction="#onClick" text="GO">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <DisplacementMap>
+                     <mapData>
+                        <FloatMap />
+                     </mapData>
+                  </DisplacementMap>
+               </effect>
+               <HBox.margin>
+                  <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="tableView" minHeight="570.0" prefWidth="960.0" style="-fx-font-size: 14px;" tableMenuButtonVisible="true" />
+   </center>
+</BorderPane>
